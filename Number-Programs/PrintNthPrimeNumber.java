@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+
+
+public class PrintNthPrimeNumber {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter n: ");
+        int n= sc.nextInt();
+        int count=0;
+        for(int i=2;;i++)
+        {
+            if(isPrime(i))
+            count++;
+            if(count==n)
+            {
+                System.out.println(i);
+                break;
+            }
+        }
+    }
+    public static boolean isPrime(int n)
+    {
+        if(n<2)
+        return false;
+        if(n==2 || n==3)
+        return true;
+
+        if(n%2==0)
+        return false;
+
+        // for(int i=3;i<n/2;i+=2)
+        for(int i=3;i*i<n;i+=2) 
+        {
+            if(n%i==0)
+            return false;
+        }
+        return true;
+    }
+}
