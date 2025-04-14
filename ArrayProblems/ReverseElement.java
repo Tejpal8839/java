@@ -1,4 +1,6 @@
-class reverse_Element {
+
+ 
+ class ReverseElement {
     public static void main(String[] args) {
         
         int[] a = {10,23,45,56,76};
