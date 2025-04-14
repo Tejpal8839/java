@@ -1,3 +1,4 @@
+
 public class BiggestSmallestDifference {
     public static void main(String[] args) {
         
